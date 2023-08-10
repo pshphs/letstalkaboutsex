@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin-top: 5%;
+}
+
+.title {
+    padding-left: 73%;
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+    padding-top: 1%;
+}
+
+.title1 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+}
+
+.title2 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+}
+.title3 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+}
+.title4 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+}
+.title5 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+}
+
+.answer {
+    padding-left: 74%;
+    padding-top: 0.5%;
+    padding-right: 4%;
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    padding-top: 3%;
+    text-align: left;
+    padding-top: 0.2%;
+    text-align: left;
+}
+
+.answer1 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 16%;
+    display: inline;
+    background: black;
+    padding: 0.01vw;
+}
+
+.answer1:hover {
+    background: white;
+    color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    cursor: pointer;  
+}
+
+.answer2 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 16%;
+    display: inline;
+    background: black;
+    padding: 0.01vw;
+}
+
+.answer2:hover {
+    background: white;
+    color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    cursor: pointer;  
+}
+
+.answer2-2 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-right: 16%;
+    display: inline;
+    background: black;
+    padding: 0.01vw;
+}
+
+.answer2-2:hover {
+    background: white;
+    color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    cursor: pointer;  
+}
+
+.answer3 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 9%;
+    display: inline;
+    background: black;
+    padding: 0.01vw;
+}
+
+.answer3:hover {
+    background: white;
+    color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    cursor: pointer;  
+}
+
+.answer4 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 16%;
+}
+
+.answer5 {
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 16%;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Acumin-pro-extra-condensed';
+    src: local('/font/Acumin-pro-extra-condensed.ttf'), url('/font/Acumin-pro-extra-condensed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SuisseIntl-Book';
+    src: local('/font/SuisseIntl-Book.ttf'), url('/font/SuisseIntl-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Medium';
+    src: local('/font/SuisseIntl-Medium.ttf'), url('/font/SuisseIntl-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Regular';
+    src: local('/font/SuisseIntl-Regular.ttf'), url('/font/SuisseIntl-Regular.ttf') format('truetype');
+}
+
+#footer-left {
+    position: fixed;
+    background: black;
+    width: 13vh;
+    height: 4vh;
+    bottom: 1%;
+    left: 1.5%;
+    padding-top: 0.09vw;
+    color: white;
+    font-size: 3.5vh;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-middle {
+    position: fixed;
+    background: black;
+    width: 22vh;
+    height: 4vh;
+    bottom: 1%;
+    left: calc(50% - 11vh);
+    padding-top: 0.5vh;
+    padding-bottom: 0.3vh;
+    color: white;
+    font-size: 3.5vh;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+#footer-right {
+    position: fixed;
+    background: black;
+    width: 13vh;
+    height: 4vh;
+    bottom: 1%;
+    right: 1.5%;    
+    padding-top: 0.09vw;
+    color: white;
+    font-size: 3.5vh;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#rectangle1 {
+    width: 9vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 1.13vw;
+    position: fixed;
+}
+
+#rectangle2 {
+    width: 20vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 12vw;
+    position: fixed;
+}
+
+#rectangle3 {
+    width: 8vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 40vw;
+    position: fixed;
+}
+
+#rectangle4 {
+    width: 1.4vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 43vw;
+    position: fixed;
+}
+
+#rectangle5 {
+    width: 5vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 55vw;
+    position: fixed;
+}
+
+#rectangle6 {
+    width: 30vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 64vw;
+    position: fixed;
+}
+
+#rectangle7 {
+    width: 3vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 95vw;
+    position: fixed;
+}
+
+/* responsive */
+@media only screen and (max-width:768px) {
+.title {
+    padding-left: 2%;
+    line-height: 90%;
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 4vh;
+    text-align: left;
+    padding-top: 4.5%;
+}
+
+.title1 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    text-align: left;
+}
+
+.title2 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    text-align: left;
+}
+.title3 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    text-align: left;
+}
+.title4 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    text-align: left;
+}
+.title5 {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    text-align: left;
+}
+
+.answer {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 0.5%;
+    font-family: 'SuisseIntl-Book';
+    font-size: 2vh;
+    text-align: left;   
+}
+
+.answer1 {
+    background: black;
+    padding: 0.0001vh;
+}
+
+.answer2 {
+    background: black;
+    padding: 0.0001vh;
+}
+
+.answer2-2 {
+    background: black;
+    padding: 0.0001vh;
+}
+
+.answer3 {
+    background: black;
+    padding: 0.0001vh;
+}
+
+.answer4 {
+    padding-left: 5%;
+    padding-right: 16%;
+}
+
+.answer5 {
+    padding-left: 5%;
+    padding-right: 16%;
+}
+
+#footer-left {
+    width: 11.6vh;
+    bottom: 6%;
+}
+
+#footer-middle {
+    width: 22vh;
+    bottom: 1.5%;
+    left: 1.5%;
+}
+
+#footer-right {
+    width: 12.8vh;
+    bottom: 10.5%;
+    left: 1.5%;
+}  
+}

@@ -1,0 +1,145 @@
+/* container: left + top */
+#b {
+    width: 94%;
+    height: 100vh;
+    float: center;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+#b:hover {
+    transform: translate(-40%);
+    transform: scale(1.2);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.left {
+    padding-left: 1%;
+}
+
+.info {
+    color: white;
+    top: 2.5vh;
+    left: 2vw;
+}
+
+.info:hover {
+    color: black;
+    background: white;
+    padding: 0.3vw;
+    padding-right: 2vw;
+    padding-bottom: 0.8vw;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+
+/* container: right + bottom */
+#number1 {
+    left: 35.8%;
+}
+
+#number2 {
+    left: 2.7%;    
+}
+
+#number3 {
+    left: 35.8%;
+}
+
+#number4 {
+    left: 2.7%;
+}
+
+#number5 {
+    left: 35.8%;
+}
+
+#number6 {
+    left: 2.7%;
+}
+
+#number7 {
+    left: 35.8%;
+}
+
+#number8 {
+    left: 2.7%;
+}
+
+
+/* responsive */
+@media only screen and (max-width:768px) {
+    .container {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 30%;
+	    overflow-y: scroll;
+        overflow-x: hidden;
+        border-bottom: 0.15vh solid black;
+        border-right: transparent;
+    }
+
+    .right {
+        width: 100%;
+        height: 70%;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    /* container: left + top */
+    #b {
+        width: 95%;
+        padding-left: 2.3%;
+    }
+
+    .info {
+        display: none;
+    }
+
+    /* container: right + bottom */
+    .right-question {
+        font-size: 3.5vh;
+        padding-left: 3%;
+    }
+    
+    .right-answer {
+        font-size: 2.2vh;
+        padding-left: 3.3% !important;
+        padding-right: 0.5% !important;
+    }
+
+    .left-question {
+        font-size: 3.5vh;
+        padding-left: 3%;
+    }
+    
+    .left-answer {
+        font-size: 2.2vh;
+        padding-left: 3.3% !important;
+        padding-right: 0.5% !important;
+    }
+
+   .number {
+        top: 5vw !important;
+        left: 3% !important;
+    }
+    
+    /* footer */
+    #footer-middle {
+        bottom: 1%;
+   }
+    
+    #footer-middle-dummy {
+        bottom: 1%;
+    }
+}

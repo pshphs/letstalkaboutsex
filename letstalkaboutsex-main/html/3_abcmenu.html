@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="/js/jquery.js"></script>
+
+    <title>Let’s Talk About Sex</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here"/>
+
+    <link rel="stylesheet" href="/css/0_default.css"/>
+    <link rel="stylesheet" href="/css/3_abcmenu.css"/>
+  </head>
+
+
+  <body>
+    <div id="texts" class="d-none"></div>
+
+    <div id="rectangle1"></div>
+    <div id="rectangle2"></div>
+    <div id="rectangle3"></div>
+    <div id="rectangle4"></div>
+    <div id="rectangle5"></div>
+    <div id="rectangle6"></div>
+    <div id="rectangle7"></div>
+
+    <a href="/html/4_ainterview.html">
+      <img src="/img/A.png" alt="A" class="a">
+    </a>
+    <a href="/html/5_binterview.html">
+      <img src="/img/B.png" alt="B" class="b">
+    </a>
+
+    <a href="/html/6_cinterview.html">
+      <img src="/img/C.png" alt="C" class="c">
+    </a>
+
+    <a href="/html/7_dinterview.html">
+      <img src="/img/D.png" alt="D" class="d">
+    </a>
+
+    <a href="/html/8_einterview.html">
+      <img src="/img/E.png" alt="E" class="e">
+    </a>
+    
+    <div class="footer">
+      <a>
+        <div id="footer-middle">QUESTIONS</div>
+        <a id="footer-middle-dummy"></a>
+      </a> 
+
+      <a href="/html/2_introductory.html">
+        <img src="/img/X.png" alt="arrow-left" id="arrow-left" a id="arrow-left-dummy">
+      </a>  
+
+      <a href="/html/lastpage.html">
+        <img src="/img/X.png" alt="arrow-right" id="arrow-right" a id="arrow-right-dummy">
+      </a> 
+    </div>
+  </div>
+
+
+  <script>
+    $("#footer-middle-dummy").click(() => {
+      $("#texts").toggleClass("d-none");
+
+      let texts = [
+        ["HAVE YOU DISCUSSED", "SEX-RELATED TOPICS", "WITH FRIENDS OR PEOPLE", "AROUND YOU?"],
+        ["WHEN DID", "YOU FIRST VISIT", "A GYNECOLOGIST?"],
+        ["WHAT ARE YOUR", "THOUGHTS ON", "EX EDUCATION?"],
+        ["DO YOU HAVE", "ANY HOPES FOR", "SEX EDUCATION?"],
+        ["HAVE YOU EVER HAD", "OPEN DISCUSSIONS ABOUT", "SEX WITH YOUR", "FAMILY OR FRIENDS?"],
+        ["HAVE YOU EVER", "TALKED ABOUT THESE", "TOPICS WITH", "YOUR CHILDREN?"],
+        ["HOW DID YOU", "PRACTICE", "CONTRACEPTION?"],
+        ["WOULD YOU", "RECOMMEND BIRTH", "CONTROL PILLS?"],
+        ["ARE YOU CURIOUS", "ABOUT SEX AND YOUR", "OWN BODY AND", "DID YOU ASK QUESTIONS?"],
+      ];
+
+      let map = [[20, 5], [65, 10], [2, 55], [30, 70], [60, 40], [75, 70]];
+      $("#texts").empty();
+      for (let i = 0; i < map.length; i++) {
+        map[i][0] = map[i][0] * (1 + (0.5 - Math.random()) / 5);
+        map[i][1] = map[i][1] * (1 + (0.5 - Math.random()) / 5);
+        map[i][0] = Math.round($("#texts").width() * map[i][0] / 100);
+        map[i][1] = Math.round($("#texts").height() * map[i][1] / 100);
+
+        let text = Math.floor(Math.random() * texts.length);
+        if (text == texts.length) text = text - 1;
+        text = texts.splice(text, 1)[0];
+        let _text = "";
+        for (let j = 0; j < text.length; j++) {
+          _text = `${_text}<div><span>${text[j]}<span></div>`;
+        }
+        $("#texts").append(`<div class="question-text" style="position: fixed; left: ${map[i][0]}px; top: ${map[i][1]}px;">${_text}</div>`);
+      }
+    });
+  </script>
+
+</body>
+</html>

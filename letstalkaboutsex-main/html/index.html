@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Let’s Talk About Sex</title>
+    <script src="../js/jquery.js"></script>
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/0_default.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="body">
+    <main class="header" onclick="location.href = '2_introductory.html'">
+        <h1 id="hover-text" class="text-white">LET’S<br>TALK<br>ABOUT</h1>
+        <div class="reveal-text-image">
+            <img src="../img/Asset 3.png" />
+        </div>
+        <div id="canvas" class="canvas"></div>
+    </main>
+
+    <div class="scroll-area"></div>
+
+    <script>
+        (function () {
+            let hoverCnt = 0;
+            let animationStarted = false;
+
+            // $(".header").on("mousewheel", function (event, delta) {
+            //     if (delta > 0) {
+            //         console.log("마우스 휠을 올렸습니다.")
+            //     } else if (delta < 0) {
+            //         console.log("마우스 휠을 내렸습니다.");
+            //     }
+            // });
+
+            $("#hover-text").on("mouseover", function () {
+                if (hoverCnt === -1) return;
+                hoverCnt++;
+                console.log(hoverCnt);
+
+                if (hoverCnt > 3) {
+                    if (!animationStarted) {
+                        animationStarted = true;
+                        $('#hover-text').addClass("hover-text_animation")
+                        // $('#hover-text').addClass("d-none")
+                        hoverCnt = -1;
+                    }
+                }
+            });
+
+            function createCanvas(parent, width, height) {
+                var canvas = {};
+                canvas.node = document.createElement('canvas');
+                canvas.context = canvas.node.getContext('2d');
+                canvas.node.width = width;
+                canvas.node.height = height;
+                parent.appendChild(canvas.node);
+                return canvas;
+            }
+
+            function init(container, width, height, fillColor) {
+                var canvas = createCanvas(container, width, height);
+                var ctx = canvas.context;
+
+                ctx.fillCircle = function (x, y, radius, fillColor) {
+                    this.fillStyle = fillColor;
+                    this.beginPath();
+                    this.moveTo(x, y);
+                    this.arc(x, y, radius, 0, Math.PI * 2, false);
+                    this.fill();
+                };
+                ctx.clearTo = function (fillColor) {
+                    ctx.fillStyle = fillColor;
+                    ctx.fillRect(0, 0, width, height);
+                };
+                ctx.clearTo(fillColor || "#000");
+
+                $('.header').on("mousemove", function (e) {
+                    if (!canvas.isDrawing) {
+                        return;
+                    }
+                    var x = e.pageX - this.offsetLeft;
+                    var y = e.pageY - this.offsetTop;
+                    var radius = 70;
+                    var fillColor = '#ff0000';
+                    // add blur to circle
+                    ctx.globalCompositeOperation = 'destination-out';
+                    ctx.fillCircle(x, y, radius, fillColor);
+
+                    // radius = 100;
+                    // ctx.fillStyle = 'white';
+                    // ctx.fillRect(x, y, radius * 2, radius);
+                });
+
+                $('.header').on("mouseover", function (e) {
+                    canvas.isDrawing = true;
+                });
+            }
+
+            var container = document.getElementById('canvas');
+            init(container, window.innerWidth, window.innerHeight, '#000');
+        })();
+    </script>
+</body>
+
+</html>

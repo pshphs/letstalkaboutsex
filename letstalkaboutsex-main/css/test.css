@@ -1,0 +1,270 @@
+html,
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container{
+    background-color: white; 
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+  
+.left{
+    width: 48%;
+    height: 100%;
+    overflow: scroll;
+    border-right: 0.15vh solid black;
+}
+
+.h {
+    font-family: 'SuisseIntl-Medium';
+    font-size: 10vw;
+    line-height: 79%;
+    letter-spacing: -0.2vw;
+    padding-top: 3.6%;
+    padding-left: 8px;
+}
+
+.let {
+    letter-spacing:0.3px;
+
+}
+
+.right{
+    width: 68%;
+    height: 100%;
+    overflow: scroll;
+    padding-left: 15%;
+    padding-bottom: 15%;
+}
+
+.right, .p {
+    font-family: 'SuisseIntl-Medium';
+    text-align: left;
+    line-height: 140%;
+    font-size: 2.5vh;
+    padding-top: 10px;
+    padding-right: 40px;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+.p1 {
+    margin-left: 50%;
+}
+
+.highlight:hover {
+    color: white;
+    background-color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+  /* .highlight:hover:after {
+    content: 'SEX EDUCATION';
+    color: black;
+    width: 1vw;
+    line-height: 80%;
+    font-family: 'Acumin-pro-extra-condensed';
+    font-size: 4.5vw;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    position: fixed;
+    left: 1vw;
+    bottom: 0;
+}*/
+
+.highlight{
+    background-color: transparent;
+}
+
+.highlight .highlightcontent{
+   display: none;
+}
+
+.highlight:hover > .highlightcontent{
+    display: block;
+}
+
+.highlightcontent{
+    position: fixed;
+    z-index: -100000;
+    bottom: 5vw;
+    left: 40vw;
+    background-color: green;
+}
+
+
+#x {
+    position: relative;
+    left: 46.2vw;
+    top: 25vh;
+    height: 6vh;
+}
+
+#x:hover {
+    transform: translate(-40%);
+    transform: scale(1.2);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+
+
+@font-face {
+    font-family: 'Acumin-pro-extra-condensed';
+    src: local('/font/Acumin-pro-extra-condensed.ttf'), url('/font/Acumin-pro-extra-condensed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SuisseIntl-Book';
+    src: local('/font/SuisseIntl-Book.ttf'), url('/font/SuisseIntl-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Medium';
+    src: local('/font/SuisseIntl-Medium.ttf'), url('/font/SuisseIntl-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Regular';
+    src: local('/font/SuisseIntl-Regular.ttf'), url('/font/SuisseIntl-Regular.ttf') format('truetype');
+}
+
+#footer-left {
+    position: fixed;
+    background: black;
+    width: 100px;
+    height: 30px;
+    top: 95.5%;
+    left: 0.9%;
+    padding-top: 0.09vw;
+    color: white;
+    font-size: 30px;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#footer-middle {
+    position: fixed;
+    background: black;
+    width: 193px;
+    height: 30px;
+    top: 95.5%;
+    left: 44%;
+    padding-top: 0.09vw;
+    color: white;
+    font-size: 30px;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-right {
+    position: fixed;
+    background: black;
+    width: 187px;
+    height: 30px;
+    top: 95.5%;
+    left: 88%;
+    padding-top: 0.09vw;
+    color: white;
+    font-size: 30px;
+    font-family: 'SuisseIntl-Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-middle-dummy {
+    position: fixed;
+    width: 193px;
+    height: 30px;
+    top: 95.5%;
+    left: 44%;
+    padding-top: 0.09vw;
+    z-index: 99999;
+    cursor: pointer;
+    background: transparent;
+}
+
+#rectangle1 {
+    width: 9vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 1.13vw;
+    position: fixed;
+}
+
+#rectangle2 {
+    width: 20vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 12vw;
+    position: fixed;
+}
+
+#rectangle3 {
+    width: 8vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 40vw;
+    position: fixed;
+}
+
+#rectangle4 {
+    width: 1.4vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 43vw;
+    position: fixed;
+}
+
+#rectangle5 {
+    width: 5vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 55vw;
+    position: fixed;
+}
+
+#rectangle6 {
+    width: 30vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 64vw;
+    position: fixed;
+}
+
+#rectangle7 {
+    width: 3vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 95vw;
+    position: fixed;
+}

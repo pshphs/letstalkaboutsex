@@ -1,0 +1,356 @@
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Acumin-pro-extra-condensed';
+    src: local('/font/Acumin-pro-extra-condensed.ttf'), url('/font/Acumin-pro-extra-condensed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'SuisseIntl-Book';
+    src: local('/font/SuisseIntl-Book.ttf'), url('/font/SuisseIntl-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Medium';
+    src: local('/font/SuisseIntl-Medium.ttf'), url('/font/SuisseIntl-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Regular';
+    src: local('/font/SuisseIntl-Regular.ttf'), url('/font/SuisseIntl-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Bold';
+    src: local('/font/NotoSansCJKkr-Bold.ttf'), url('/font/NotoSansCJKkr-Bold.ttf') format('truetype');
+}
+
+.container{
+    background-color: white; 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+  
+.left{
+    width: 20%;
+    height: 100%;
+    overflow: scroll;
+    border-right: 0.15vh solid black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.right{
+    width: 80%;
+    height: 100%;
+    overflow: scroll;
+    padding-left: 8%;
+    padding-right: 3.5%;
+    padding-bottom: 9%;
+    overflow-x: hidden;
+}
+
+#rectangle1 {
+    width: 10vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 0.6vw;
+    position: fixed;
+}
+
+#rectangle2 {
+    width: 20vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 12vw;
+    position: fixed;
+}
+
+#rectangle3 {
+    width: 10vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 37vw;
+    position: fixed;
+}
+
+#rectangle4 {
+    width: 1.4vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 46vw;
+    position: fixed;
+}
+
+#rectangle5 {
+    width: 7vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 55vw;
+    position: fixed;
+}
+
+#rectangle6 {
+    width: 30vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 64vw;
+    position: fixed;
+}
+
+#rectangle7 {
+    width: 3vw;
+    height: 1.3vh;
+    background: black;
+    top: 0px; 
+    left: 95vw;
+    position: fixed;
+}
+
+
+/* container: left + top */
+.info {
+    font-family: 'SuisseIntl-Regular';
+    text-align: left;
+    line-height: 99%;
+    font-size: 0.7vw;
+    position: absolute;
+    z-index: 101;
+}
+
+
+/* container: right + bottom */
+.right, .p {
+    font-family: 'SuisseIntl-Medium';
+    text-align: left;
+    line-height: 140%;
+    font-size: 2.5vh;
+}
+
+p{
+    background: black;
+    display: inline;
+    padding: 2px 0;
+}
+
+p:hover{
+    background: black;
+    color: white;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+.right-question {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 3.8vh;
+    text-align: left;
+    line-height: 102%;
+    padding-top: 4.5%;
+    padding-left: 37%;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+.right-answer {
+    font-family: 'SuisseIntl-Medium';
+    font-size: 2.5vh;
+    text-align: left;
+    line-height: 143%;
+    padding-top: 1%;
+    padding-left: 38%;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+.left-question {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 3.8vh;
+    text-align: left;
+    line-height: 102%;
+    padding-top: 4.5%;
+    padding-left: 4%;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+.left-answer {
+    font-family: 'SuisseIntl-Medium';
+    font-size: 2.5vh;
+    text-align: left;
+    line-height: 143%;
+    padding-top: 1%;
+    padding-right: 40%;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+}
+
+#last-answer {
+    padding-bottom: 13%;
+}
+
+.number {
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+    font-size: 2.4vh;
+    position: relative;
+    max-width: 10vw;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 100;
+    position: relative;
+    filter: invert(1);
+    top: 70px;
+}
+
+
+/* footer */
+#footer-middle {
+    background: black;
+    color: white;
+    font-family: 'SuisseIntl-Regular';
+    font-size: 3.5vh;
+    width: 22vh;
+    height: 4vh;
+    position: fixed;
+    bottom: 1%;
+    left: calc(50% - 11vh);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+#footer-middle-dummy {
+    position: fixed;
+    width: 22vh;
+    height: 4vh;
+    bottom: 1%;
+    left: calc(50% - 11vh);
+    z-index: 99999;
+    cursor: pointer;
+}
+
+#arrow-right {
+    width: 4vh;
+    height: 4vh;
+    background: black;
+    right: 1.5%;
+    bottom: 1%;
+    position: fixed;
+    background: white;
+    z-index: 99999;
+}
+
+#arrow-left {
+    width: 4vh;
+    height: 4vh;
+    background: black;
+    left: 1.5%;
+    bottom: 1%;
+    position: fixed;
+    background: white;
+    z-index: 99999;
+    rotate: 180deg;
+}
+
+#arrow-right:hover {
+    transform: translate(-40%);
+    transform: scale(1.2);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+#arrow-left:hover {
+    transform: translate(-40%);
+    transform: scale(1.2);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+#arrow-right-dummy {
+    position: fixed;
+    width: 4vh;
+    height: 4vh;
+    right: 1.5%;
+    bottom: 1%;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+#arrow-left-dummy {
+    position: fixed;
+    width: 4vh;
+    height: 4vh;
+    left: 1.5%;
+    bottom: 1%;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    overflow-x: hidden;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: black; 
+}
+
+.d-none {
+    display: none;
+}
+
+#texts {
+    position: fixed;
+    z-index: 8888;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.question-text span {
+    display: inline;
+    font-size: 3vw;
+    background-color: black;
+    color: white;
+    line-height: 80%;
+    text-align: center;    
+    font-family: 'Acumin-pro-extra-condensed';
+    font-style: italic;
+}
+
+

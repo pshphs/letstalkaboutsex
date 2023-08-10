@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="../js/jquery.js"></script>
+
+  <title>Let’s Talk About Sex</title>
+  <meta name="author" content="name" />
+  <meta name="description" content="description here" />
+
+  <link rel="stylesheet" href="../css/0_default.css"/>
+  <link rel="stylesheet" href="../css/2_introductory.css" />
+</head>
+
+<body>
+  <div id="texts" class="d-none"></div>
+  
+  <div id="rectangle1"></div>
+  <div id="rectangle2"></div>
+  <div id="rectangle3"></div>
+  <div id="rectangle4"></div>
+  <div id="rectangle5"></div>
+  <div id="rectangle6"></div>
+  <div id="rectangle7"></div>
+
+  <div class="container">
+    <div class="left">
+      <div class="h">
+        <div id="default-text" class="left-title">
+          <div class="let">
+            LET’S
+          </div>
+          TALK<br>ABOUT<br>SEX
+        </div>
+
+        <div id="clicked-text-1" class="left-title d-none">
+          <div class="otis-1">
+            SEX<br>
+            EDUCA-<br>
+            TION
+          </div>
+          <div class="otis-2">
+            오티스의<br>
+            비밀 상담소
+          </div>
+        </div>
+        <div id="clicked-text-2" class="left-title d-none" >
+          <div class="year-1">
+            THE YEAR<br>
+            I STARTED<br>
+            MASTUR-<br>
+            BATING
+          </div>
+          <div class="year-2">
+            내가 그것을<br>
+            시작한 이유
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <a>
+          <div id="footer-middle">QUESTIONS</div>
+          <a id="footer-middle-dummy"></a>
+        </a> 
+  
+        <a href="../html/index.html">
+          <img src="../img/X.png" alt="arrow-left" id="arrow-left" a id="arrow-left-dummy">
+        </a>  
+  
+        <a href="../html/3_abcmenu.html">
+          <img src="../img/X.png" alt="arrow-right" id="arrow-right" a id="arrow-right-dummy">
+        </a> 
+      </div>
+    </div>
+
+    <div class="right">
+      <paragraph>
+        &emsp;&emsp;&emsp;&emsp;&emsp;The ideology that has been embed in Asian county, mostly East Asia,
+        traditional family system is Confucianism. Sex in Confucianism is an act only for the birth and has meaning in
+        the purity and succession of lineage. Sexuality centered on childbirth made sex a restricted topic throughout
+        old Asian society, and it remains a universal perception of sex even till these days. In other words, this
+        society recognizes sex as a private and taboo area that is secretly shared. The Confucian sex culture, which
+        prohibits sex, does not convey information about sex accurately even in official educational settings, and even
+        at home, children are indifferent to sex and think that the less they know, the better. As young children grow
+        up in this sociocultural background, they form a negative perception of sex from an early age. As they grow
+        older, they naturally develop sexual curiosity and may have an extreme attitude of having excessive sexual
+        interest more than necessary.
+        <br>&emsp;&emsp;&emsp;&emsp;&emsp;Censorship significantly hinders the open discussion of sexual content
+        in our daily lives, leading to instances where sex remains a taboo subject. There are examples that show how sex
+        is still seen as something embarrassing or forbidden. For example, the well-known Netflix show <text
+          class="highlight"><span id="click-item-1">“Sex Education” is translated into “Otis’s
+            Secret
+            Clinic,</span></text> and another
+        show called
+        <text class="highlight" id="click-item-2">
+          “The Year I Started Masturbating” is changed to “The Year I Started That.”
+        </text>
+
+        Furthermore, additional instances can be observed in Japanese anime where characters originally shown wearing
+        bikinis are modified to have more clothing coverage.
+        <br>&emsp;&emsp;&emsp;&emsp;&emsp;With this social context, for my interviews with women in their 50s and
+        60s from South Korea, I aimed to delve into their knowledge and experiences with birth control pills. As we
+        engaged in conversations, it became evident that they had grown up in a culture that was considerably
+        conservative when it came to discussing matters of sex and related topics. They shared that open dialogues about
+        contraception, including birth control pills, were relatively scarce during their formative years. However,
+        despite these societal limitations, they expressed their happiness and enthusiasm about participating in the
+        interview. They recognized it as a valuable opportunity to candidly share their personal journeys, shedding
+        light on how they navigated the realm of birth control when such discussions were less prevalent. Through their
+        willingness to engage in this dialogue, they demonstrated a genuine desire to contribute to collective knowledge
+        and help others gain insights into their unique perspectives.
+        <br>&emsp;&emsp;&emsp;&emsp;&emsp;The interview began with a question about whether they had ever used
+        birth control pills. I believed that it was a relatively easy topic to start the conversation and gradually
+        discuss sex and their personal experiences. The participants mainly included my mom’s friends, some of whom I
+        had known since I was very young. However, not all participants were receptive to the interviews. Some who I
+        couldn’t include in my project gave rather short and disinterested answers, displaying a lack of engagement.
+        Others outright refused to participate, showing discomfort when it came to discussing about sex.
+        <br>&emsp;&emsp;&emsp;&emsp;&emsp;It’s important to recognize that the participants’ sexual misconceptions
+        and their lack of openness in discussing sex can be attributed, at least in part, to Pierre Bourdie’s concept of habitus. Bourdieu argued that habitus encompasses individuals’ deeply ingrained dispositions and behaviors
+        shaped by their socialization within a particular social context. Understanding the participants’ habitus helps
+        us recognize that their misconceptions and lack of openness are not solely their fault. Rather, it reflects the
+        broader social structures, norms, and limited access to comprehensive sexual education that shape their habitus.
+        By considering this, we can approach the topic with empathy and work towards promoting more informed and open
+        discussions about sex.
+      </paragraph>
+    </div>
+  </div>
+
+
+  <script>
+    $('#click-item-1').mouseenter(() => {
+      $('.left-title').addClass("d-none");
+      $('#clicked-text-1').removeClass("d-none");
+    });
+
+    $('#click-item-1').mouseleave(() => {
+      $('.left-title').addClass("d-none");
+      $('#default-text').removeClass("d-none");
+    });
+
+    $('#click-item-2').mouseenter(() => {
+      $('.left-title').addClass("d-none");
+      $('#clicked-text-2').removeClass("d-none");
+    });
+
+    $('#click-item-2').mouseleave(() => {
+      $('.left-title').addClass("d-none");
+      $('#default-text').removeClass("d-none");
+    });
+
+    $("#footer-middle-dummy").click(() => {
+      $("#texts").toggleClass("d-none");
+
+      let texts = [
+        ["HAVE YOU DISCUSSED", "SEX-RELATED TOPICS", "WITH FRIENDS OR PEOPLE", "AROUND YOU?"],
+        ["WHEN DID", "YOU FIRST VISIT", "A GYNECOLOGIST?"],
+        ["WHAT ARE YOUR", "THOUGHTS ON", "EX EDUCATION?"],
+        ["DO YOU HAVE", "ANY HOPES FOR", "SEX EDUCATION?"],
+        ["HAVE YOU EVER HAD", "OPEN DISCUSSIONS ABOUT", "SEX WITH YOUR", "FAMILY OR FRIENDS?"],
+        ["HAVE YOU EVER", "TALKED ABOUT THESE", "TOPICS WITH", "YOUR CHILDREN?"],
+        ["HOW DID YOU", "PRACTICE", "CONTRACEPTION?"],
+        ["WOULD YOU", "RECOMMEND BIRTH", "CONTROL PILLS?"],
+        ["ARE YOU CURIOUS", "ABOUT SEX AND YOUR", "OWN BODY AND", "DID YOU ASK QUESTIONS?"],
+      ];
+
+      let map = [[20, 5], [65, 10], [2, 55], [30, 70], [60, 40], [75, 70]];
+      $("#texts").empty();
+      for (let i = 0; i < map.length; i++) {
+        map[i][0] = map[i][0] * (1 + (0.5 - Math.random()) / 5);
+        map[i][1] = map[i][1] * (1 + (0.5 - Math.random()) / 5);
+        map[i][0] = Math.round($("#texts").width() * map[i][0] / 100);
+        map[i][1] = Math.round($("#texts").height() * map[i][1] / 100);
+
+        let text = Math.floor(Math.random() * texts.length);
+        if (text == texts.length) text = text - 1;
+        text = texts.splice(text, 1)[0];
+        let _text = "";
+        for (let j = 0; j < text.length; j++) {
+          _text = `${_text}<div><span>${text[j]}<span></div>`;
+        }
+        $("#texts").append(`<div class="question-text" style="position: fixed; left: ${map[i][0]}px; top: ${map[i][1]}px;">${_text}</div>`);
+      }
+    });
+  </script>
+
+  </body>
+</html>
